@@ -3,6 +3,8 @@ const express = require('express')
 const app = express()
 var cors = require('cors');
 const Users = require('./models/users');
+const PresupuestosConProyecto = require('./models/presupuestos_proyecto');
+const Efectivo = require('./models/efectivo')
 const sequelize = require('./db/conexion')
 const router = require('./routes/routes')
 
@@ -41,13 +43,11 @@ async function inicioServidor() {
 }
 
 async function synchronizeTables() {
-  // await sequelize.sync({ force: true });
   Users.sync({ force: true })
-  // Categories.sync({ force: true })
-  // Products.sync({ force: true })
-  // Customers.sync({ force:true })
+  PresupuestosConProyecto.sync({ force: true})
+  Efectivo.sync({ force: true})
   console.log('All models were synchronized successfully')
 }
 
 inicioServidor()
-// synchronizeTables()
+synchronizeTables()

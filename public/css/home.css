@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: border-box;
+}
+
+header {
+  padding: 4rem 0;
+}
+
+.tablePresupuestos {
+  display: flex;
+  border: 3px solid black;
+  border-radius: 8px;
+  width: 90%;
+}
+
+.presupuesto {
+  display: flex;
+  justify-content: space-between;
+  width: 100%
+}
+
+.presupuesto__description {
+  border-right: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.presupuesto__description > span {
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.accionables__presupuesto {
+  display: flex;
+  flex-direction: column;
+}
